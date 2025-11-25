@@ -1,0 +1,157 @@
+/* #region || CSS RESET 
+*, *::before, *::after {
+    box-sizing: border-box;
+} 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* #endregion || CSS RESET 
+*/
+
+/* #region || Variables */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --pri: #263A5A;
+    --sec: #AFCEE6;
+    --accent: #BF2928;
+}
+/* #endregion || Variables */
+
+/* #region || General Styles & Typography */
+html {
+    font-family: aviano-flare, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    color: var(--sec);
+    background-color: var(--black);
+}
+body {
+    min-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: var(--pri);
+    font-family: all-round-gothic, sans-serif;
+    font-weight: 400;
+}
+a { 
+    text-decoration: none;
+    color: var(--sec);
+}
+
+.hide {
+    display: none;
+}
+header {
+    height: 300px;
+}
+nav {
+    position: relative;
+    /*top: 5px;*/
+    height: 60px;
+    overflow: visible;
+    left: 900px;
+    width: 300px;
+}
+nav ul {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+}
+h1 {
+    margin: 0 25px;
+    font-family: aviano-flare, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36pt;
+}
+h2 {
+    font-family: aviano-flare, sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+}
+h3, h4, h5 {
+    font-family: all-round-gothic, sans-serif;
+    font-weight: 600;
+}
+li {
+    list-style-type: none;
+}
+nav a:hover {
+    color: var(--accent);
+}
+.active {
+    color: var(--accent);
+}
+/* #endregion || General Styles & Typography */
+
+/* #region || Mobile First 600px */
+@media screen and (max-width: 600px) {
+nav ul {
+
+
+}
+}
+/* #endregion || Mobile First 600px */
+
+/* #region || Medium 768px */
+@media screen and (min-width: 600px) {
+
+}
+/* #endregion || Medium 768px */
+
+/* #region || Large 1200px max */
+@media screen and (max-width: 1200px) {
+
+}
+/* #endregion || Large 1200px max */
+
