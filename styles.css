@@ -77,42 +77,61 @@ html {
     background-color: var(--black);
 }
 body {
-    min-width: 1200px;
-    height: 100%;
     margin: 0 auto;
     background-color: var(--pri);
     font-family: all-round-gothic, sans-serif;
     font-weight: 400;
+    display: grid;
+    grid-template-areas:
+    "header nav"
+    "main main"
+    "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 3fr 3fr;
+    height: 100vh;
+    width: 100vw;
 }
 a { 
     text-decoration: none;
     color: var(--sec);
 }
-
 .hide {
     display: none;
 }
 header {
-    height: 300px;
+    grid-area: header;
 }
 nav {
-    position: relative;
-    /*top: 5px;*/
-    height: 60px;
-    overflow: visible;
-    left: 900px;
-    width: 300px;
+    grid-area: nav;
+    display: grid;
+    justify-content: end;
 }
 nav ul {
+    /*position: absolute;*/
+    top: 5px;
+    overflow: visible;
     display: grid;
     grid-template-columns: 100px 100px 100px;
+}
+#dropdown {
+    display: none;
 }
 h1 {
     margin: 0 25px;
     font-family: aviano-flare, sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 36pt;
+}
+#full {
+    display: none;
+}
+#initials {
+    display: block;
+}
+main {
+    grid-area: main;
+    height: ;
 }
 h2 {
     font-family: aviano-flare, sans-serif;
@@ -132,26 +151,61 @@ nav a:hover {
 .active {
     color: var(--accent);
 }
+footer {
+    grid-area: footer;
+    display: grid;
+    justify-content: end;
+}
+footer img {
+    padding-right: 35px;
+    padding-bottom: 35px;
+}
+
 /* #endregion || General Styles & Typography */
 
 /* #region || Mobile First 600px */
 @media screen and (max-width: 600px) {
+body {
+    width: 100%;
+}
+nav {
+    position: absolute;
+    top: 5px;
+    overflow: visible;
+}
 nav ul {
-
-
+    overflow: hidden;
+    max-height: 0;
 }
 }
 /* #endregion || Mobile First 600px */
 
 /* #region || Medium 768px */
-@media screen and (min-width: 600px) {
-
+@media screen and (min-width: 768px) {
+body {
+    width: 100%;
+}
+#full {
+    display: block;
+    font-size: .65em;
+}
+#initials {
+    display: none;
+}
+nav ul {
+    
+}
 }
 /* #endregion || Medium 768px */
 
 /* #region || Large 1200px max */
-@media screen and (max-width: 1200px) {
-
+@media screen and (min-width: 1200px) {
+body {
+    width: 1200px;
+}
+#full {
+    font-size: 1em;
+}
 }
 /* #endregion || Large 1200px max */
 
