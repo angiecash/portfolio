@@ -1,4 +1,4 @@
-/* #region || CSS RESET 
+/* #region || ------- CSS RESET ------- 
 *, *::before, *::after {
     box-sizing: border-box;
 } 
@@ -54,10 +54,10 @@ table {
     scroll-behavior: auto !important;
   }
 }
-/* #endregion || CSS RESET 
+/* #endregion || ------- CSS RESET -------
 */
 
-/* #region || Variables */
+/* #region || ------- Variables ------- */
 :root {
     --black: #000000;
     --white: #ffffff;
@@ -65,9 +65,9 @@ table {
     --sec: #AFCEE6;
     --accent: #BF2928;
 }
-/* #endregion || Variables */
+/* #endregion || ------- Variables ------- */
 
-/* #region || General Styles & Typography */
+/* #region || ------- General Styles (Mobile First) ------- */
 html {
     font-family: aviano-flare, sans-serif;
     font-weight: 400;
@@ -101,22 +101,24 @@ a {
 header {
     grid-area: header;
 }
-nav {
-    grid-area: nav;
-    display: grid;
-    justify-content: end;
+main {
+    grid-area: main;
+    margin: 0 auto;
+    padding-top: 50px;
 }
-nav ul {
-    /*position: absolute;*/
-    top: 5px;
-    overflow: visible;
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
+h2 {
+    font-family: aviano-flare, sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+    color: var(--accent);
 }
-#dropdown {
-    display: none;
+h3, h4, h5 {
+    font-family: all-round-gothic, sans-serif;
+    font-weight: 600;
 }
-h1 {
+
+/* ------- LOGO ------- */
+#logo {
     margin: 0 25px;
     font-family: aviano-flare, sans-serif;
     font-style: normal;
@@ -129,19 +131,20 @@ h1 {
 #initials {
     display: block;
 }
-main {
-    grid-area: main;
-    margin: 0 auto;
-    padding-top: 50px;
+/* ------- LOGO END ------- */
+
+/* ------- NAVIGATION ------- */
+nav {
+    grid-area: nav;
+    display: grid;
+    justify-content: end;
 }
-h2 {
-    font-family: aviano-flare, sans-serif;
-    font-weight: 700;
-    font-size: 24pt;
+nav ul {
+    overflow: hidden;
+    max-height: 0;
 }
-h3, h4, h5 {
-    font-family: all-round-gothic, sans-serif;
-    font-weight: 600;
+#dropdown {
+    display: block;
 }
 li {
     list-style-type: none;
@@ -152,6 +155,9 @@ nav a:hover {
 .active {
     color: var(--accent);
 }
+/* ------- NAVIGATION END ------- */
+
+/* ------- WORK THUMBNAILS ------- */
 .image-wrapper {
     width: 100px;
     height: 300px;
@@ -183,7 +189,9 @@ nav a:hover {
     max-width: 85vw;
     outline: 4px solid white;
 }
-/* footer */
+/* ------- WORK THUMBNAILS END ------- */
+
+/* ------- FOOTER ------- */
 footer {
     grid-area: footer;
     display: grid;
@@ -193,27 +201,18 @@ footer img {
     padding-right: 35px;
     padding-bottom: 35px;
 }
+/* ------- FOOTER END ------- */
+/* #endregion || ------- General Styles (Mobile First) ------- */
 
-/* #endregion || General Styles & Typography */
-
-/* #region || Mobile First 600px */
-@media screen and (max-width: 600px) {
+/* #region || ------- Small 600px ------- */
+@media screen and (min-width: 600px) {
 body {
     width: 100%;
 }
-nav {
-    position: absolute;
-    top: 5px;
-    overflow: visible;
 }
-nav ul {
-    overflow: hidden;
-    max-height: 0;
-}
-}
-/* #endregion || Mobile First 600px */
+/* #endregion || ------- Small 600px ------- */
 
-/* #region || Medium 768px */
+/* #region || ------- Medium 768px ------- */
 @media screen and (min-width: 768px) {
 body {
     width: 100%;
@@ -225,9 +224,22 @@ body {
 #initials {
     display: none;
 }
+nav {
+    top: 5px;
+    overflow: visible;
+}
+nav ul {
+    top: 5px;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+}
+#dropdown {
+    display: none;
+}
 .image-wrapper {
-    width: 200px;
-    height: 650px;
+    width: 150px;
+    height: 450px;
     overflow: hidden;
     display: flex;
     float: left;
@@ -238,9 +250,9 @@ body {
     transition: overflow .3s ease-in-out;
 }
 }
-/* #endregion || Medium 768px */
+/* #endregion || ------- Medium 768px ------- */
 
-/* #region || Large 1200px max */
+/* #region || ------- Large 1200px max ------- */
 @media screen and (min-width: 1200px) {
 body {
     width: 1200px;
@@ -248,6 +260,10 @@ body {
 #full {
     font-size: 1em;
 }
+.image-wrapper {
+    width: 200px;
+    height: 650px;
 }
-/* #endregion || Large 1200px max */
+}
+/* #endregion || ------- Large 1200px max ------- */
 
