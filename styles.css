@@ -161,89 +161,6 @@ nav a:hover {
 /* ------- NAVIGATION END ------- */
 
 /* ------- WORK THUMBNAILS ------- */
-/*
-.image-wrapper {
-    width: 100px;
-    height: 300px;
-    overflow: hidden;
-    display: flex;
-    float: left;
-    outline: 4px solid var(--black);
-    margin: 20px;
-    align-items: center;
-    justify-content: center;
-    transition: overflow .3s ease-in-out;
-}
-*/
-/*
-.image-wrapper img {
-    height: 100%;
-    /*transition: transform .3s ease-in-out;
-}
-*/
-/*
-.image-wrapper:hover {
-    overflow: visible;
-    outline: none;
-}
-.image-wrapper:hover img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    height: auto;
-    max-height: 85vh;
-    max-width: 85vw;
-    outline: 4px solid white;
-}
-/* ------- WORK THUMBNAILS END ------- */
-
-/* ------- BIO ------- */
-#profile_img {
-    height: 300px;
-}
-#bio {
-    display: grid;
-    grid-template-rows: 80px repeat(4, auto);
-    padding: 35px;
-}
-#page_title {
-    grid-row: 1 / span 1;
-}
-#bio_img {
-    grid-row: 3 / span 1;
-}
-#profile_img {
-    width: 300px;
-    height: auto;
-}
-#statement {
-    grid-row: 2 / span 1;
-}
-#about {
-    grid-row: 4 / span 1;
-}
-#list {
-    grid-row: 5 / span 1;
-}
-/* ------- BIO END ------- */
-
-/* ------- FOOTER ------- */
-footer {
-    grid-area: footer;
-    display: grid;
-    justify-content: end;
-    padding: 20px;
-}
-footer img {
-    padding-right: 35px;
-    padding-bottom: 35px;
-}
-/* ------- FOOTER END ------- */
-/* #endregion || ------- General Styles (Mobile First) ------- */
-
-/* #region || Test Styles */
 .container {
     justify-content: center;
     align-items: center;
@@ -304,7 +221,51 @@ footer img {
         }
     }
 }
-/* #endregion || Test Styles */
+/* ------- WORK THUMBNAILS END ------- */
+
+/* ------- BIO ------- */
+#profile_img {
+    height: 300px;
+}
+#bio {
+    display: grid;
+    grid-template-rows: 80px repeat(4, auto);
+    padding: 35px;
+}
+#page_title {
+    grid-row: 1 / span 1;
+}
+#bio_img {
+    grid-row: 3 / span 1;
+}
+#profile_img {
+    width: 300px;
+    height: auto;
+}
+#statement {
+    grid-row: 2 / span 1;
+}
+#about {
+    grid-row: 4 / span 1;
+}
+#list {
+    grid-row: 5 / span 1;
+}
+/* ------- BIO END ------- */
+
+/* ------- FOOTER ------- */
+footer {
+    grid-area: footer;
+    display: grid;
+    justify-content: end;
+    padding: 20px;
+}
+footer img {
+    padding-right: 35px;
+    padding-bottom: 35px;
+}
+/* ------- FOOTER END ------- */
+/* #endregion || ------- General Styles (Mobile First) ------- */
 
 /* #region || ------- Small 600px ------- */
 @media screen and (min-width: 600px) {
