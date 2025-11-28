@@ -138,26 +138,27 @@ h3, h4, h5 {
 nav {
     background-color: var(--pri);
     color: var(--white);
-    position: relative;
+    /*position: relative;*/
     z-index: 1000;
 }
 nav ul {
-    grid-template-rows: repeat(3, 25px);
+    /*grid-template-rows: repeat(3, 25px);*/
     text-align: center;
     overflow: hidden;
     max-height: 0;
     z-index: 100;
     position: absolute;
-    top: 100%;
+    /*top: 100%;*/
     left: 0;
     right: 0;
     background-color: #263A5AF0;
 }
 #menutext {
     cursor: pointer;
-    position: relative;
-    top: -50px;
-    left: 575px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    padding-right: 20px;
 }
 #dropdown:checked ~ ul {
     max-height: 80vh;
