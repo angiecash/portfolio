@@ -83,11 +83,11 @@ body {
     font-weight: 400;
     display: grid;
     grid-template-areas:
-    "header nav"
-    "main main"
-    "footer footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 3fr 3fr;
+    "header"
+    "nav"
+    "main"
+    "footer";
+    grid-template-rows: auto 1fr auto auto;
     min-height: 100vh;
 }
 a { 
@@ -95,7 +95,9 @@ a {
     color: var(--sec);
 }
 .hide {
-    display: none;
+    visibility: hidden;
+    height: 0px;
+    margin: 0px;
 }
 header {
     grid-area: header;
@@ -104,7 +106,6 @@ header {
 main {
     grid-area: main;
     margin: 0 auto;
-    /*padding: 50px 20px;*/
 }
 h2 {
     font-family: aviano-flare, sans-serif;
@@ -135,25 +136,48 @@ h3, h4, h5 {
 
 /* ------- NAVIGATION ------- */
 nav {
-    grid-area: nav;
-    display: grid;
-    justify-content: end;
+    background-color: var(--pri);
+    color: var(--white);
+    position: relative;
+    z-index: 1000;
 }
 nav ul {
+    grid-template-rows: repeat(3, 25px);
+    text-align: center;
     overflow: hidden;
     max-height: 0;
+    z-index: 100;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #263A5AF0;
+}
+#menutext {
+    cursor: pointer;
+    position: relative;
+    top: -50px;
+    left: 575px;
+}
+#dropdown:checked ~ ul {
+    max-height: 80vh;
 }
 #dropdown {
-    display: block;
+    display:none;
+}
+#dropdown:checked ~ ul {
+    max-height: 400px;
 }
 li {
     list-style-type: none;
 }
 nav li {
     text-transform: uppercase;
+    padding: 10px 18px 18px;
 }
 nav a:hover {
     color: var(--accent);
+    font-weight: 700;
 }
 .active {
     color: var(--accent);
@@ -162,12 +186,11 @@ nav a:hover {
 
 /* ------- WORK THUMBNAILS ------- */
 .container {
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
     margin:  10vmin;
 
     .card {
-        flex: 1;
         transition: all 1s ease-in-out;
         height: 95vmin;
         position: relative;
@@ -248,11 +271,14 @@ body {
 
 /* #region || ------- Medium 768px ------- */
 @media screen and (min-width: 768px) {
-/*
-    body {
-    width: 100%;
+body {
+    grid-template-areas:
+    "header nav"
+    "main main"
+    "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 2fr 1fr;
 }
-*/
 #full {
     display: block;
     font-size: .65em;
@@ -260,19 +286,29 @@ body {
 #initials {
     display: none;
 }
+/* ------- NAVIGATION 768px ------- */
 nav {
     top: 5px;
     overflow: visible;
+    transition: all .5s ease-in-out;
+    grid-area: nav;
+    position: absolute;
+    justify-self: end;
 }
 nav ul {
-    top: 5px;
-    overflow: visible;
     display: grid;
     grid-template-columns: 100px 80px 100px;
+    grid-template-rows: none;
+    overflow: visible;
+    justify-content: end;
 }
-#dropdown {
+#dropdown, #menutext  {
     display: none;
 }
+
+/* ------- NAVIGATION 768px END -------  */
+
+/* ------- CONTAINER 768px ------- */
 .container {
     display: flex;
     justify-content: center;
@@ -328,8 +364,13 @@ nav ul {
         }
     }
 }
-/* ------- CONTAINER ------- */
-/* ------- BIO ------- */
+.container:has(.card:hover)
+        .card:not(:hover) {
+            filter: blur(4px);
+        }
+/* ------- CONTAINER 768px END ------- */
+
+/* ------- BIO 768px ------- */
 #bio {
     display: grid;
     grid-template-columns: 60px 400px auto;
@@ -361,7 +402,8 @@ nav ul {
     grid-column: 3 / span 1;
     grid-row: 4 / span 1;
 }
-/* ------- BIO END ------- */
+/* ------- BIO 768px END ------- */
+
 }
 /* #endregion || ------- Medium 768px ------- */
 
