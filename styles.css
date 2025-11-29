@@ -230,17 +230,20 @@ nav a:hover {
 #bio {
     display: grid;
     grid-template-rows: 80px repeat(4, auto);
-    padding: 35px;
+    padding: 0 35px;
 }
 #page_title {
     grid-row: 1 / span 1;
 }
 #bio_img {
     grid-row: 3 / span 1;
+    align-self: center;
+    margin: 0 auto;
 }
 #profile_img {
     width: 300px;
     height: auto;
+    border-radius: 10%;
 }
 #statement {
     grid-row: 2 / span 1;
@@ -409,17 +412,17 @@ nav ul {
 /* ------- ABOUT 768px ------- */
 #bio {
     display: grid;
-    grid-template-columns: 40px 200px auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 80px auto auto auto;
     gap: 25px;
     column-gap: 50px;
 }
 #page_title {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 2;
     grid-row: 1 / span 1;
 }
 #bio_img {
-    grid-column:  3 / span 1;
+    grid-column:  2 / span 1;
     grid-row: 2 / span 2;
 }
 #profile_img {
@@ -427,15 +430,15 @@ nav ul {
     height: auto;
 }
 #statement {
-    grid-column: 2 / span 1;
+    grid-column: 1 / span 1;
     grid-row: 2 / span 1;
 }
 #about {
-    grid-column: 2 / span 1;
+    grid-column: 1 / span 1;
     grid-row: 3 / span 1;
 }
 #list {
-    grid-column: 2 / span 1;
+    grid-column: 1 / span 1;
     grid-row: 4 / span 1;
 }
 /* ------- ABOUT 768px END ------- */
@@ -486,7 +489,7 @@ body {
     font-size: 1em;
 }
 #bio {
-    grid-template-columns: 115px 600px auto;
+    grid-template-columns: 50% 50%;
 }
 }
 /* #endregion || ------- Large 1200px max ------- */
