@@ -33,46 +33,68 @@
             <h2 class="hide">Navigation</h2>
             <input type="checkbox" id="dropdown">
             <label for="dropdown">
-                <span></span>
+                <span id="menutext">MENU</span>
             </label>
             <ul>
                 <li><a href="index.html">Work</a></li>
-                <li><a href="bio.html">Bio</a></li>
+                <li><a href="bio.html">About</a></li>
                 <li><a href="mailto:acash9@asu.edu">Contact</a></li>
             </ul>
         </nav>
 
         <main>
             <div id="case_container">
-                <h2 id="case_title">SMC Construction, LLC</h2>
-                <p id="case_intro">Relaunching a Contractor's Digital Presence: Building a Clean, Modern Site for SMC Construction</p>
+                <div id="case_header">
+                    <h2>SMC Construction, LLC</h2>
+                </div>
 
                 <div id="info">
-                    <h3 class="accent">Objective</h3>
+                    <p><em>Relaunching a Contractor's Digital Presence: Building a Clean, Modern Site for SMC Construction</em></p>
+                    <h3>Objective</h3>
+                    <p>I was hired to develop a professional-looking website for SMC Construction, LLC after the client’s previous site had expired. The owner relied primarily on word-of-mouth and an active Facebook page to display past work. The client needed a refreshed online presence that felt professional, trustworthy, and easy for potential customers to explore. His audience consists largely of homeowners seeking remodeling, repairs, and small construction work, so the site needs to feel approachable, trustworthy, and easy to navigate for users who may not be tech-savvy.</p>
 
-                    <h3 class="accent">Synopsis</h3>
+                    <p>The project required a single-page website that could reestablish the client’s online presence, showcase completed projects in a clean, organized way, and include modern features such as a light/dark mode toggle, validated and semantic code, a contact form, and a user-friendly project gallery. 
+                    </p>
 
-                    <h3 class="accent">Process</h3>
+                    <h3>Synopsis</h3>
+                    <p>I researched a wide-range of construction-related websites, from large construction firms to local handymen, to understand relevant design patterns and user expectations. While the client used Facebook to showcase past projects, I wanted the website’s carousel to feel more organized, easy to navigate, and visually cohesive. My goal was to create a simple, professional website, while strengthening my skills in JavaScript and jQuery. </p>
 
-                    <h3 class="accent">Results</h3>
+                    <h3>Process</h3>
+                    <p>I began by organizing the site’s content and developing an outline suited to a single-page layout. One early challenge was determining how to present a large number of images without overwhelming users. This led me to create low-fidelity wireframes, exploring different ways to balance visual impact with readability. Iterating through several versions helped me to identify a layout that felt the most balanced, professional, and easy to navigate.</p>
 
+                    <p>As I moved into development, I structured the code with future updates and maintenance in mind. Because single-page websites rely on smooth vertical flow, I built the header and footer first to establish strong structural anchors to ensure consistency for organizing the remaining sections.</p>
+
+                    <p>Implementing the gallery carousel was the most technically involved step. I chose to use JavaScript and jQuery to provide precise control over transitions and user interactions. I have never created a carousel gallery before, so I tested multiple approaches and referenced training sites to ensure accurate functionality. The final solution offered a simple yet intuitive way for users to browse projects.
+                    </p>
+
+                    <h3>Results</h3>
+                    <p>The project was completed on time and within budget, successfully reestablishing SMC Construction’s online presence. The new single-page website provides a clean, modern platform for showcasing the client’s work, making it easier for potential customers to browse projects and contact the business directly. There are future plans to update the website with responsive design and full accessibility features.</p>
+
+                    <p>The site can be viewed here:<br>
+                    <a href="https://angiecash.github.io/SMC-Construction/" class="link">SMC Construction, LLC.</a>
+                    </p>
                 </div>
 
-                <div id="images">
-                    <img src="images/NewHomeLight.JPG" alt="SMC Construction Homepage in Light Mode">
-                    <img src="images/NewHomeDark.JPG" alt="SMC Construction Homepage in Dark Mode">
-                    <img src="images/NewGalleryLight.JPG" alt="SMC Construction Gallery of Work">
-                    <img src="images/NewContactCalendarLight.JPG" alt="SMC Construction Contact Calendar">
+                <div id="images_mockup">
+                    <img class="mockup" src="images/SMCMockup.png" alt="mockup1">
+                    <img class="mockup" src="images/SMC2Mockup.png" alt="mockup2">
+                    <img class="mockup" src="images/SMC3Mockup.png" alt="mockup3">
+                </div>
 
+                <div id="images_flat">
+                    <img class="sidebyside" src="images/NewHomeLight.JPG" alt="SMC Construction Homepage in Light Mode">
+                    <img class="sidebyside" src="images/NewHomeDark.JPG" alt="SMC Construction Homepage in Dark Mode">
+                    <img class="sidebyside" src="images/NewGalleryLight.JPG" alt="SMC Construction Gallery of Work">
+                    <img class="sidebyside" src="images/NewContactCalendarLight.JPG" alt="SMC Construction Contact Calendar">
                 </div>
             
-  
             </div>
         </main>
 
         <footer>
             <h2 class="hide">Social</h2>
-            <a href="https://www.linkedin.com/in/angela-cash-b4ab3a5/"><img src="images/in-logo/InBug-White.png" height="30" alt="LinkedIn icon"></a>
+            <a href="https://www.linkedin.com/in/angela-cash-b4ab3a5/"><img src="images/in-logo/LI-In-Bug.png" height="30" alt="LinkedIn icon"></a>
+            <a href="#"><img src="images/github-mark.png" alt="GitHub cat icon" height="30"></a>
         </footer>
     </body>
 </html>
