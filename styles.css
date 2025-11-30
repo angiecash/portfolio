@@ -164,9 +164,6 @@ nav ul {
 #dropdown {
     display:none;
 }
-#dropdown:checked ~ ul {
-    max-height: 400px;
-}
 li {
     list-style-type: none;
 }
