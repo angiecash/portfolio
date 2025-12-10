@@ -84,17 +84,6 @@ table {
 }
 /* #endregion || Skip Link Styles */
 
-/* #region || Hidden Content Styles */
-.sr-only {
-	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-}
-/* #endregion || Hidden Content Styles */
-
 /* #region || ------- General Styles ------- */
 html {
     font-family: aviano-flare, sans-serif;
@@ -172,6 +161,9 @@ nav li {
 nav a:hover {
     color: var(--dkaccent);
     font-weight: 700;
+}
+a:focus, button:focus, input:focus {
+	outline: 4px solid var(--dkaccent);
 }
 .container {
     display: flex;
