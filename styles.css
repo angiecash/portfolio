@@ -78,9 +78,9 @@ table {
 	overflow: hidden;
 }
 #skip:focus {
-		position: static;
-		width: auto;			
-		height: auto;
+    position: static;
+    width: auto;			
+    height: auto;
 }
 /* #endregion || Skip Link Styles */
 
