@@ -1,4 +1,4 @@
-/* #region || ------- CSS RESET ------- 
+/* #region || ------- CSS RESET ------- */
 *, *::before, *::after {
     box-sizing: border-box;
 } 
@@ -23,13 +23,13 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers 
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section { 
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -54,8 +54,7 @@ table {
     scroll-behavior: auto !important;
   }
 }
-/* #endregion || ------- CSS RESET -------
-*/
+/* #endregion || ------- CSS RESET ------- */
 
 /* #region || ------- Variables ------- */
 :root {
@@ -101,6 +100,7 @@ html {
     font-family: aviano-flare, sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.2em;
     box-sizing: border-box;
     color: var(--pri);
     line-height: 1.5;
@@ -115,8 +115,8 @@ body {
     "header"
     "main"
     "footer";
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    grid-template-rows: auto max-content auto;
+    /*min-height: 100vh;*/
 }
 header {
     grid-area: header;
@@ -128,6 +128,7 @@ header {
 main {
     grid-area: main;
     margin: 0 auto;
+    display: grid;
 }
 a { 
     text-decoration: none;
@@ -173,16 +174,38 @@ nav a:hover {
     margin: 0 5vmin;
     gap: 20px;
 }
+/* ------- Back to top button ------- */
+#back-to-top {
+	display: none;
+	position: fixed;
+	bottom: 60px;
+	right: 40px;
+	padding: 10px;
+	color: var(--dkaccent);
+	border-radius: 15px;
+	background-color: var(--black);
+	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
+	transition: all .3s ease-in-out;
+	z-index: 1000;
+	cursor: pointer;
+	border-style: inset;
+	max-width: 120px;
+	font-size: 1em;
+}
+#back-to-top.show {
+	display: block;
+	opacity: 1;
+}
 /* ------- FOOTER ------- */
 footer {
     grid-area: footer;
     display: flex;
     justify-content: end;
-    padding: 20px;
+    /*padding: 20px;*/
+    margin-top: 50px;
 }
 footer img {
     padding-right: 15px;
-    padding-bottom: 20px;
 }
 /* ------- FOOTER END ------- */
 /* #endregion || ------- General Styles ------- */
@@ -195,6 +218,9 @@ footer img {
 }
 .active {
     color: var(--dkaccent);
+}
+strong {
+    font-weight: 700;
 }
 /* #endregion || ------- General Classes ------- */
 
@@ -222,7 +248,7 @@ nav ul {
     position: absolute;
     left: 0;
     right: 0;
-    top: 40px;
+    top: 60px;
     /*color: var(--sec);*/
     background-color: #ffffffF0;
     transition: all .5s ease-in-out;
@@ -230,7 +256,7 @@ nav ul {
 #menutext {
     cursor: pointer;
     position: absolute;
-    top: 30px;
+    top: 0;
     right: 0;
     padding-right: 20px;
     color: var(--pri);
@@ -278,11 +304,40 @@ nav ul {
 .card:hover .card_title {
     background-color: var(--dkaccent);
     color: var(--greybg);
-    /*outline: 4px solid var(--pri);*/
-    
 }
 .card:hover img {
     outline: 4px solid var(--pri);
+}
+#in-progress {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+    
+}
+#in-progress h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+#in-progress img {
+    width: 100%;
+    outline: 3px solid var(--black);
+    margin-top: 30px;
+}
+.label {
+    color: var(--pri);
+    background: var(--sec);
+    min-width: 50%;
+    height: auto;
+    text-align: center;
+    font-size: 1.5em;
+    white-space: nowrap;
+    outline: 4px solid var(--black);
+    /*transition: all .3s ease-in-out;*/
+    margin: 0 auto;
 }
 /* ------- CASE STUDY GALLERY END (Mobile) ------- */
 
@@ -291,59 +346,76 @@ nav ul {
     height: 300px;
 }
 #bio {
-    display: grid;
-    grid-template-rows: 80px repeat(4, auto);
+    /*display: grid;
+    grid-template-rows: 80px repeat(4, auto);*/
+    display: flex;
+    flex-direction: column;
     padding: 0 35px;
+    margin: 50px 1em 1em 1em;
+}
+#bio p {
+    margin-bottom: 20px;
 }
 #page_title {
     grid-row: 1 / span 1;
 }
 #bio_img {
     grid-row: 3 / span 1;
-    align-self: center;
-    margin: 0 auto;
+    /*align-self: center;*/
+    margin: 50px auto 20px auto;
 }
 #profile_img {
     width: 300px;
     height: auto;
-    border-radius: 10%;
-    border: 5mm ridge var(--pri);
+    border-radius: 100%;
+    border: 5mm outset var(--pri);
 }
 #statement {
     grid-row: 2 / span 1;
+    margin-bottom: 20px;
+}
+#certs {
+    margin-bottom: 20px;
 }
 #about {
     grid-row: 4 / span 1;
+    margin-bottom: 20px;
 }
 #list {
     grid-row: 5 / span 1;
+    margin-bottom: 20px;
 }
 /* ------- ABOUT END (Mobile) ------- */
 
 /* -------  CASE STUDIES (Mobile) ------- */ 
 #case_container {
     margin: 0 auto;
-    padding: 20px;
+    display: grid;
+    grid-template-rows: 250px auto auto;
+    padding: 15px;
+}
+#images {
+    grid-row: 2 / span 1;
+}
+#info {
+    grid-row: 3 / span 1;
 }
 .link {
     color: var(--dkaccent);
     font-size: 1.5em;
 }
-div #images_mockup img, div #images img, div #images_flat img {
-    width: 98%;
-    /*padding: 15px;*/
-    margin: 25px;
-}
-
 div #images_flat img {
     width: 90%;
     padding: 15px;
+}
+div .image_card img {
+    max-width: 90vw;
+    margin: 0 auto;
 }
 .image_meta {
     text-align:end;
     margin-bottom: 25px;
     margin-right: 25px;
-    color: var(--sec);
 } 
 /* -------  CASE STUDIES END (Mobile) ------- */
 /* #endregion || ------- Mobile First ------- */
@@ -364,16 +436,14 @@ nav {
     justify-self: end;
     font-size: 1.5em;
     top: 0;
-    /*right: 100px;*/
+/*    right: 80px; */
 }
 nav ul {
     display: flex;
     overflow: visible;
     justify-content: end;
-    max-height:fit-content;
-    max-width: fit-content;
     background-color: var(--greybg);
-    top: -15px;
+    top: 0;
 }
 #dropdown, #menutext  {
     display: none;
@@ -437,10 +507,10 @@ nav ul {
 
 /* ABOUT 768px */
 #bio {
-    /*display: grid;*/
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px auto auto auto;
-    gap: 25px;
+    grid-template-rows: 80px auto auto auto auto;
+    /*gap: 25px;*/
     column-gap: 50px;
 }
 #page_title {
@@ -448,43 +518,61 @@ nav ul {
 }
 #bio_img {
     grid-column:  2 / span 1;
-    grid-row: 2 / span 2;
+    grid-row: 3 / span 2;
 }
-/*
-#profile_img {
-    width: 300px;
-    height: auto;
-}
-*/
 #statement {
-    grid-column: 1 / span 1;
-    /*grid-row: 2 / span 1;*/
+    grid-column: 1 / span 2;
 }
 #about {
     grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
+    grid-row: 3 / span 2;
+}
+#sevensix, #nineninetwo {
+    grid-column: 1 / span 2;
+}
+#certs {
+    grid-column: 1 / span 1;
+    grid-row: 7 / span 1;
 }
 #list {
-    grid-column: 1 / span 1;
-    grid-row: 4 / span 1;
+    grid-column: 2 / span 1;
+    grid-row: 7 / span 1;
+    background-color: var(--sec);
+    border-radius: 25px;
+    padding: 15px;
+}
+#list h3 {
+    text-align: center;
+}
+#list ul {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-evenly;
+}
+#work-exp {
+    grid-column: 1 / span 2;
+    grid-row: 8 / span 1;
+    text-align: center;
 }
 /* ABOUT 768px END */
 
 /* CASE STUDIES 768px */
 #case_container {
     display: grid;
-    grid-template-columns: 50px 1fr 2fr 1fr;
-    grid-template-rows: 150px auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 170px auto auto;
     column-gap: 25px;
     align-items: start;
 }
 #case_header {
     grid-row: 1 / span 1;
-    grid-column: 2 / span 3;
+    grid-column: 1 / span 1;
 }
 #info {
-    grid-row: 2 / span 1;
-    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
     align-self: start;
     background-color: var(--sec);
     color: var(--black);
@@ -497,21 +585,51 @@ nav ul {
     justify-self: center;
     width: 100%;
 }
-/*
-.image_card {
-    
+#images img {
+    outline: 3px solid var(--dkaccent);
+    max-width: 90vw;
+   /* margin: 0 auto;*/
+   max-width:100%;
 }
-/*
-.mockup {
-    max-width: 100%;
-    height: auto;
-}
-*/
 /* CASE STUDIES 768px END */
 }
 /* #endregion || ------- Medium 768px ------- */
 
-/* #region || ------- Large 1200px max ------- */
+/* #region || ------- Large 992px ------- */
+@media screen and (min-width: 992px) {
+    #in-progress {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px auto auto;
+    }
+    #in-progress h3 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+    #in-progress img:nth-child(2) {
+        width: 95%;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    #in-progress img:nth-child(4) {
+        width: 95%;
+        height: auto;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+    #in-progress p:nth-child(2) {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+    #in-progress p:nth-child(4) {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+        height: auto;
+    }
+}
+/* #region || ------- Large 992px ------- */
+
+/* #region || ------- XLarge 1200px max ------- */
 @media screen and (min-width: 1200px) {
 body, header {
     max-width: 1200px;
@@ -519,8 +637,23 @@ body, header {
 #full {
     font-size: 1em;
 }
-#bio {
-    grid-template-columns: 50% 50%;
+#bio_img {
+    grid-row: 3 / span 3;
 }
+#sevensix {
+    grid-column: 1 / span 1;
 }
-/* #endregion || ------- Large 1200px max ------- */
+#case_container {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#info {
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+}
+#images {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+}
+
+}
+/* #endregion || ------- XLarge 1200px max ------- */

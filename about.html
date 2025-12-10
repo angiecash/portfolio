@@ -8,12 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link href="style.css" rel="stylesheet">
-    
     <!-- <link rel="canonical" href=""> -->
     <meta name="robots" content="noindex">
 
-    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js" defer></script>
     <link rel="shortcut icon" href="images/faviconRGB.png">
     <link rel="stylesheet" href="https://use.typekit.net/hwd6ufb.css">
     <link rel="stylesheet" href="https://use.typekit.net/hwd6ufb.css">
@@ -22,29 +20,27 @@
   </head>
 
     <body>
-        <!-- 
         <a id="skip" href="#main-content">Skip to Main Content</a>
-        -->
+
         <header>
             <h1 id="logo"><span id="full">Angela Cash</span> <span id="initials">AC</span></h1>
+            <nav>
+                <h2 class="hide">Navigation</h2>
+                <input type="checkbox" id="dropdown">
+                <label for="dropdown">
+                    <span id="menutext">MENU</span>
+                </label>
+                <ul>
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <nav>
-            <h2 class="hide">Navigation</h2>
-            <input type="checkbox" id="dropdown">
-            <label for="dropdown">
-                <span id="menutext">MENU</span>
-            </label>
-            <ul>
-                <li><a href="index.html">Work</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
-        <main>
+        <main id="main-content">
             <div id="bio">
-                <h2 id="page_title">About</h2>
+                <h2 id="page_title">About Me</h2>
                 <div id="bio_img">
                     <img id="profile_img" src="images/LinkedInProfile.jpg" alt="Profile picture of Angela Cash">
                 </div>
@@ -52,11 +48,29 @@
                     <p>With two years of experience as a web developer, I craft clean, scalable code that delivers responsive, accessible websites designed to optimize functionality and usability.</p>
                 </div>
                 <div id="about">
-                    <p>I am a U.S. Air Force Veteran and Senior IT professional with over 20 years of experience in Information Technology. My experience spans across system administration, network infrastructure and administration, boundary protection, and operating system applications.</p>
-                    <p>I am a strategic thinker with the ability to understand complex problems and brainstorm creative solutions.</p>
-                    <p>CompTIA Network+<br>
-                    CompTIA Security+</p>
+                    <p>I am a U.S. Air Force Veteran and Senior IT professional with 20 years of real-world experience keeping networks secure, systems running, and missions on track.</p>    
+                        
+                    <p>I've led network security for 12,000+ machines across 40 control centers, restored encrypted communications in the field with TACLANE and Cisco gear, and troubleshot global video Teleconferencing for General Dynamics IT. That experience taught me how to think three steps ahead, solve problems fast, and deliver when the pressure is on.</p>
                 </div>
+                <div id="sevensix">
+                    <p>Now I'm bringing that same discipline and strategic mindset to web development. With my freshly-earned BS in Graphic Inforamtion Technology from Arizona State University (Dean's List) and two years of front-end work, I build clean, responsive, accessible websites that perform as reliably as the networks I used to protect.</p>
+                </div>
+                <div id="nineninetwo">
+                    <p>I code in HTML, CSS, and JavaScript, design layouts in Adobe CC and Figma, and make sure every site I touch is responsive and user-friendly on any device.</p>
+                    
+                    <p>My experience spans across system administration, network infrastructure and administration, boundary protection, and operating system applications.</p>
+
+                    <p>When I'm not coding, I am a proud Mother of three teenagers. We love diving into the latest tech together by trying out new apps, video games, AI tools, and even exploring virtual worlds with VR headsets! Then we unplug, step out of the digital realm and head to the backyard to get our hands dirty with real-world creativity: woodworking projects like building a custom outdoor bench, planter boxes, or whatever interesting idea my kids dream up next.</p>
+                    
+                </div>
+                <div id="certs">
+                    <h3>Certifications:</h3>
+                    <ul> 
+                        <li>CompTIA Network+</li>
+                        <li>CompTIA Security+</li>
+                    </ul>
+                </div>
+                <!-- </div> -->
                 <div id="list">
                     <h3>Tools:</h3>
                     <ul>
@@ -69,9 +83,13 @@
                         <li>VisualStudio</li>
                     </ul>
                 </div>
-            
-  
+                
+                <div id="work-exp">
+                    <p><strong>Ready to code something responsive and seamless together? <a href="contact.html" class="active">Let's talk!</a></strong></p>
+                    <h3 class="hide">Work Experience</h3>
+                </div>
             </div>
+            <a href="#main-content" id="back-to-top">Top</a>
         </main>
 
         <footer>
