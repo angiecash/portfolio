@@ -27,10 +27,10 @@
         
         <header>
             <h1 id="logo"><span id="full">Angela Cash</span><span id="initials">AC</span></h1>
-        <nav>
+        <nav role="navigation">
             <h2 class="sr-only">Navigation</h2>
             <input type="checkbox" id="dropdown">
-            <label for="dropdown">
+            <label for="dropdown" aria-label="Open site navigation menu">
                 <span id="menutext">MENU</span>
             </label>
             <ul>
@@ -57,18 +57,18 @@
                 <input type="hidden" name="access_key" value="044612a0-7de3-4c6a-a017-0c340b311f09">
                     <div class="inline-two">
                     <div class="field-group">
-                        <label for="name">Your Name</label>
-                        <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
+                        <label for="name" id="name-label">Your Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" aria-labelledby="name-label" placeholder="Jane Doe" required>
                     </div>
 
                     <div class="field-group">
-                        <label for="email">Your Email</label>
-                        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                        <label for="email" id="email-label">Your Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" aria-labelledby="email-label" placeholder="you@example.com" required>
                     </div>
                     </div>
 
                     <div class="field-group">
-                    <label for="inquiry-type">Reason for reaching out <span id="sr-only">(optional)</span></label>
+                    <label for="inquiry-type" id="inquiry-label">Reason for reaching out <span class="sr-only">(optional)</span></label>
                     <select id="inquiry-type" name="inquiry-type">
                         <option value="">Select an option (optional)</option>
                         <option value="new-project">New project or website redesign</option>
@@ -79,31 +79,31 @@
                     </div>
 
                     <div class="field-group">
-                    <label for="message">Tell me about your project</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Share any details you have—goals, timeline, and links are helpful." required></textarea>
+                    <label for="message" id="message-label">Tell me about your project</label>
+                    <textarea id="message" name="message" rows="5" aria-labelledby="message-label" placeholder="Share any details you have—goals, timeline, and links are helpful." required></textarea>
                     </div>
 
                     <div class="button-row">
-                    <button type="submit" class="btn-primary">
+                    <button type="submit" class="btn-primary" aria-label="Submit Contact Form">
                         Send Message
                     </button>
-                    <span class="response-time">Typical response: 24–48 hours</span>
+                    <span class="response-time">Typical response: 24 - 48 hours</span>
                     </div>
                 </form>
             </section>
 
             <p class="small-print">
-                I currently prioritize remote-friendly projects. If you’re reaching out about long-term or part-time roles,
+                I currently prioritize remote-friendly projects. If you're reaching out about long-term or part-time roles,
                 please include your expected timeline and any key details you already know.
             </p>
 
-            <a href="#main-content" id="back-to-top">Top</a>
+            <a href="#main-content" id="back-to-top" aria-label="Back to top of page">Top</a>
         </main>
 
         <footer>
             <h2 class="hide">Social</h2>
-            <a href="https://www.linkedin.com/in/angela-cash-b4ab3a5/"><img src="images/in-logo/LI-In-Bug.png" height="45" alt="LinkedIn icon"></a>
-            <a href="#"><img src="images/github-mark.png" alt="GitHub cat icon" height="45"></a>
+            <a href="https://www.linkedin.com/in/angela-cash-b4ab3a5/"  aria-label="Angela Cash on LinkedIn"><img src="images/in-logo/LI-In-Bug.png" height="45" alt="LinkedIn icon"></a>
+            <a href="https://github.com/angiecash" aria-label="Angela Cash on GitHub"><img src="images/github-mark.png" alt="GitHub cat icon" height="45"></a>
         </footer>
     </body>
 </html>
