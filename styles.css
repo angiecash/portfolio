@@ -72,7 +72,7 @@ table {
 #skip {
 	position: absolute;
 	left: -10000px;
-	top: auto;
+	top: -500px;
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
@@ -81,6 +81,14 @@ table {
     position: static;
     width: auto;			
     height: auto;
+}
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;    
 }
 /* #endregion || Skip Link Styles */
 
