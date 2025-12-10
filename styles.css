@@ -526,6 +526,9 @@ nav ul {
     visibility:hidden;
     z-index: -5;
 }
+.card img {
+    height: 100%;
+}
 .card:hover {
     flex-grow: 15;
 }
