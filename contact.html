@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Angela Cash || Contact</title>
-    <meta name="description" content="DESCRIPTION">
+    <meta name="description" content="Angela Cash || Web Design Portfolio || Contact">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/hwd6ufb.css">
     <link rel="stylesheet" href="https://use.typekit.net/hwd6ufb.css">
     <link href="styles.css" rel="stylesheet">
+    <!-- <link href="contactstyle.css" rel="stylesheet"> -->
     
   </head>
 
@@ -41,14 +42,68 @@
         </header>
 
         <main id="main-content">
+            <section class="contact-card">
+
+                <h2 id="contact-heading">Let's build something together</h2>
+
+                <p class="lead">
+                    I'm a <strong>web designer</strong> with a background in IT and responsive front-end design. 
+                    Share a bit about your project, and I'll follow up with next steps.
+                </p>
+
+                <p class="small-note">I typically respond within 24 - 48 hours on weekdays.</p>
+
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="044612a0-7de3-4c6a-a017-0c340b311f09">
+                    <div class="inline-two">
+                    <div class="field-group">
+                        <label for="name">Your Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="email">Your Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                    </div>
+                    </div>
+
+                    <div class="field-group">
+                    <label for="inquiry-type">Reason for reaching out <span class="sr-only">(optional)</span></label>
+                    <select id="inquiry-type" name="inquiry-type">
+                        <option value="">Select an option (optional)</option>
+                        <option value="new-project">New project or website redesign</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="question">Question about my work</option>
+                        <option value="other">Other</option>
+                    </select>
+                    </div>
+
+                    <div class="field-group">
+                    <label for="message">Tell me about your project</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Share any details you have—goals, timeline, and links are helpful." required></textarea>
+                    </div>
+
+                    <div class="button-row">
+                    <button type="submit" class="btn-primary">
+                        Send Message
+                    </button>
+                    <span class="response-time">Typical response: 24–48 hours</span>
+                    </div>
+                </form>
+            </section>
+
+            <p class="small-print">
+                I currently prioritize remote-friendly projects. If you’re reaching out about long-term or part-time roles,
+                please include your expected timeline and any key details you already know.
+            </p>
 
             <a href="#main-content" id="back-to-top">Top</a>
         </main>
 
         <footer>
             <h2 class="hide">Social</h2>
-            <a href="https://www.linkedin.com/in/angela-cash-b4ab3a5/"><img src="images/in-logo/LI-In-Bug.png" height="30" alt="LinkedIn icon"></a>
-            <a href="#"><img src="images/github-mark.png" alt="GitHub cat icon" height="30"></a>
+            <a href="https://www.linkedin.com/in/angela-cash-b4ab3a5/"><img src="images/in-logo/LI-In-Bug.png" height="45" alt="LinkedIn icon"></a>
+            <a href="#"><img src="images/github-mark.png" alt="GitHub cat icon" height="45"></a>
         </footer>
     </body>
 </html>

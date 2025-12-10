@@ -116,7 +116,6 @@ body {
     "main"
     "footer";
     grid-template-rows: auto max-content auto;
-    /*min-height: 100vh;*/
 }
 header {
     grid-area: header;
@@ -157,6 +156,9 @@ h3, h4, h5 {
 li {
     list-style-type: none;
 }
+p {
+    padding: 10px;
+}
 nav {
     max-width: 100%;
 }
@@ -180,10 +182,10 @@ nav a:hover {
 	position: fixed;
 	bottom: 60px;
 	right: 40px;
-	padding: 10px;
+	padding: 20px;
 	color: var(--dkaccent);
 	border-radius: 15px;
-	background-color: var(--black);
+	background-color: var(--sec);
 	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
 	transition: all .3s ease-in-out;
 	z-index: 1000;
@@ -191,17 +193,30 @@ nav a:hover {
 	border-style: inset;
 	max-width: 120px;
 	font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#back-to-top:hover {
+    outline: 3px solid var(--pri);
 }
 #back-to-top.show {
 	display: block;
 	opacity: 1;
 }
+/* ------- CONTACT PAGE ------- */
+.contact-page {
+    width: 100%;
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
 /* ------- FOOTER ------- */
 footer {
     grid-area: footer;
     display: flex;
     justify-content: end;
-    /*padding: 20px;*/
     margin-top: 50px;
 }
 footer img {
@@ -391,7 +406,7 @@ nav ul {
 #case_container {
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 250px auto auto;
+    grid-template-rows: auto auto auto;
     padding: 15px;
 }
 #images {
@@ -404,13 +419,16 @@ nav ul {
     color: var(--dkaccent);
     font-size: 1.5em;
 }
+.image_card {
+    margin: 15px 0 15px auto;
+}
 div #images_flat img {
     width: 90%;
     padding: 15px;
 }
 div .image_card img {
     max-width: 90vw;
-    margin: 0 auto;
+    margin: 15px auto;
 }
 .image_meta {
     text-align:end;
@@ -418,6 +436,46 @@ div .image_card img {
     margin-right: 25px;
 } 
 /* -------  CASE STUDIES END (Mobile) ------- */
+/* ------- CONTACT ------- */
+.inline-two {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+.btn-primary {
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 1.6rem;
+    background: var(--pri);
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+.btn-primary:hover {
+    color: var(--dkaccent);
+    background: var(--sec);
+}
+.response-time {
+    font-size: 0.82rem;
+}
+.small-print {
+    font-size: 0.78rem;
+    color: var(--pri);
+    margin: 50px auto;
+    line-height: 1.5;
+    width: 75%;
+}
 /* #endregion || ------- Mobile First ------- */
 
 /* #region || ------- Medium 768px ------- */
@@ -482,7 +540,7 @@ nav ul {
     color: var(--dkaccent);
     background-color: var(--greybg);
     font-size: 2em;
-    height: 15%;
+    height: auto;
     width: 100%;
     padding: 10px 0px;
     visibility: visible;
@@ -562,13 +620,12 @@ nav ul {
 #case_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 170px auto auto;
-    column-gap: 25px;
-    align-items: start;
+    grid-template-rows: auto auto auto;
+    align-items:center;
 }
 #case_header {
     grid-row: 1 / span 1;
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 3;
 }
 #info {
     grid-row: 3 / span 1;
@@ -582,8 +639,8 @@ nav ul {
 #images {
     grid-column: 1 / span 3;
     grid-row: 2;
-    justify-self: center;
-    width: 100%;
+    text-align: center;
+    max-width: 100%;
 }
 #images img {
     outline: 3px solid var(--dkaccent);
@@ -592,7 +649,87 @@ nav ul {
    max-width:100%;
 }
 /* CASE STUDIES 768px END */
+
+/* CONTACT PAGE 768px */
+    .contact-card,
+    .info-card {
+    margin: 2.5rem 2.25rem;
+    }
 }
+.contact-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.03em;
+    font-family: all-round-gothic, sans-serif;
+}
+.contact-card p.lead {
+    font-size: 0.98rem;
+    max-width: 34rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+}
+.contact-card .small-note {
+    font-size: 0.85rem;
+    margin-bottom: 1.75rem;
+}
+.contact-page {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: stretch;
+}
+.contact-card,
+.info-card {
+    background-color: var(--greybg);
+    border-radius: 1.5rem;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 10px 10px rgba(15, 23, 42, 0.8);
+}
+/* Form styles */
+.contact-form {
+    display: grid;
+    gap: 1.2rem;
+}
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+label {
+    font-size: 0.9rem;
+}
+input,
+textarea,
+select {
+    background-color: var(--pri);
+    border-radius: 0.9rem;
+    border: 1px solid var(--sec);
+    padding: 0.7rem 0.9rem;
+    font: inherit;
+    color: var(--greybg);
+    outline: none;
+    transition: all 0.6s ease;
+}
+input::placeholder,
+textarea::placeholder {
+    color: var(--greybg);
+}
+textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.5;
+}
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    background-color: var(--sec);
+}
+.inline-two {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+}
+/* CONTACT PAGE END 768px */
 /* #endregion || ------- Medium 768px ------- */
 
 /* #region || ------- Large 992px ------- */
@@ -627,7 +764,7 @@ nav ul {
         height: auto;
     }
 }
-/* #region || ------- Large 992px ------- */
+/* #endregion || ------- Large 992px ------- */
 
 /* #region || ------- XLarge 1200px max ------- */
 @media screen and (min-width: 1200px) {
@@ -653,6 +790,8 @@ body, header {
 #images {
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
+    text-align: right;
+    margin: 20px;
 }
 
 }
