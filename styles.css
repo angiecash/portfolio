@@ -72,15 +72,32 @@ table {
 #skip {
 	position: absolute;
 	left: -10000px;
+    /*
 	top: -500px;
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+    */
+    display: inline-block;
+    padding: .375rem .75rem;
+    line-height: 1;
+    font-size: 1.2rem;
+    background-color: var(--white);
+    color: black;
+}
+#skip:not(:focus) {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    white-space:nowrap;
 }
 #skip:focus {
-    position: static;
-    width: auto;			
+    left: 0;
+    top: 0;
     height: auto;
+    width: auto;
+    background-color: var(--white);
+    z-index: 999999;
 }
 .sr-only {
     position: absolute;
