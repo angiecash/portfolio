@@ -103,7 +103,7 @@ html {
     font-size: 1.2em;
     box-sizing: border-box;
     color: var(--pri);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 body {
     margin: 0 auto;
@@ -135,6 +135,9 @@ a {
 }
 a:focus, button:focus, input:focus {
 	outline: 4px solid var(--dkpurple);
+}
+h1, h2, h3, h4, h5 {
+    margin: 10px;
 }
 h2 {
     font-family: aviano-flare, sans-serif;
@@ -183,9 +186,9 @@ nav a:hover {
 	bottom: 60px;
 	right: 40px;
 	padding: 20px;
-	color: var(--dkaccent);
+	color: var(--greybg);
 	border-radius: 15px;
-	background-color: var(--sec);
+	background-color: var(--pri);
 	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
 	transition: all .3s ease-in-out;
 	z-index: 1000;
@@ -197,7 +200,7 @@ nav a:hover {
     text-transform: uppercase;
 }
 #back-to-top:hover {
-    outline: 3px solid var(--pri);
+    outline: 3px solid var(--dkaccent);
 }
 #back-to-top.show {
 	display: block;
@@ -275,6 +278,7 @@ nav ul {
     right: 0;
     padding-right: 20px;
     color: var(--pri);
+    font-size: 2em;
 }
 #dropdown:checked ~ ul {
     max-height: 80vh;
@@ -621,7 +625,6 @@ nav ul {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    align-items:center;
 }
 #case_header {
     grid-row: 1 / span 1;
