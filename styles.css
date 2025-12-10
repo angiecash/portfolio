@@ -123,7 +123,7 @@ a {
     color: var(--pri);
 }
 a:focus, button:focus, input:focus {
-	outline: 4px solid var(--dkpurple);
+	outline: 4px solid var(--dkaccent);
 }
 h1, h2, h3, h4, h5 {
     margin: 10px;
@@ -161,9 +161,6 @@ nav li {
 nav a:hover {
     color: var(--dkaccent);
     font-weight: 700;
-}
-a:focus, button:focus, input:focus {
-	outline: 4px solid var(--dkaccent);
 }
 .container {
     display: flex;
@@ -705,8 +702,7 @@ select {
     outline: none;
     transition: all 0.6s ease;
 }
-input::placeholder,
-textarea::placeholder {
+input::placeholder, textarea::placeholder {
     color: var(--greybg);
 }
 textarea {
@@ -714,12 +710,11 @@ textarea {
     min-height: 140px;
     line-height: 1.5;
 }
-input:focus,
-textarea:focus,
-select:focus {
+input:focus, textarea:focus, select:focus {
     border-color: var(--accent);
     transform: translateY(-1px);
     background-color: var(--sec);
+    color: var(--pri);
 }
 .inline-two {
     display: grid;
