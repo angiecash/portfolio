@@ -531,7 +531,7 @@ nav ul {
     flex-direction: row;
     justify-content: center;
     margin: 10vmin;
-    /*transform: skew(5deg);*/
+    transform: skew(5deg);
 }
 .card {
     flex: 1;
