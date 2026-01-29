@@ -130,7 +130,7 @@ body {
     "header"
     "main"
     "footer";
-    grid-template-rows: auto max-content auto;
+    grid-template-rows: auto 80% auto;
 }
 header {
     grid-area: header;
