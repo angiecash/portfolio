@@ -119,6 +119,7 @@ html {
     color: var(--pri);
     line-height: 1.6;
 	height: 100%;
+	display: grid;
 }
 body {
     margin: 0 auto;
