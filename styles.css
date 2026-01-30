@@ -210,7 +210,7 @@ nav a:hover, nav a:focus-within {
 	color: var(--greybg);
 	border-radius: 25px; /*was 15px*/
 	background-color: var(--pri);
-	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
+	box-shadow: 0px 2px 3px rgb(255 255 255 / 0.6);
 	transition: all .3s ease-in-out;
 	z-index: 1000;
 	cursor: pointer;
@@ -223,7 +223,9 @@ nav a:hover, nav a:focus-within {
     text-transform: uppercase;*/
 }
 #back-to-top:hover, back-to-top:focus-within {
-    outline: 3px solid var(--dkaccent);
+    /*outline: 3px solid var(--dkaccent);*/
+    background-color: var(--accent);
+
 }
 #back-to-top.show {
 	display: block;
