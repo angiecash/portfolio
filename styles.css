@@ -199,21 +199,28 @@ nav a:hover, nav a:focus-within {
 #back-to-top {
 	display: none;
 	position: fixed;
-	bottom: 60px;
+	bottom: 40px;
+    /*
 	right: 40px;
-	padding: 20px;
+    */
+    right: 20px;
+    height: 50px;
+    width: 50px;
+	padding-top: 10px;
 	color: var(--greybg);
-	border-radius: 15px;
+	border-radius: 25px; /*was 15px*/
 	background-color: var(--pri);
 	box-shadow: inset 2px 2px 3px rgb(255 255 255 / 0.6);
 	transition: all .3s ease-in-out;
 	z-index: 1000;
 	cursor: pointer;
 	border-style: inset;
-	max-width: 120px;
-	font-size: 1em;
+    text-align: center;
+    overflow: hidden;
+	/*max-width: 120px;*/
+	/*font-size: 1em;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: uppercase;*/
 }
 #back-to-top:hover, back-to-top:focus-within {
     outline: 3px solid var(--dkaccent);
